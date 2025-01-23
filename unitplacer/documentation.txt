@@ -1,0 +1,30 @@
+For each map, all present characters consume one row of memory.
+
+For example, Lyn on the prologue map is stored at addresses 0xCC5B50-0xCC5B5F.
+
+In order to make sure the draft characters are placed properly, it is important
+to understand how this data is stored per map, so that we can swap it out in all places.
+
+For example, if Kent is 1st pick in the draft, Kent's data will need to be swapped in
+wherever Lyn's data is present. Likewise, Kent's base game presence will need to be removed,
+or replaced with another drafted character.
+
+Here is the documentation for what each byte does in a row:
+
+00: The unit's ID
+01: The unit's class ID
+02: If this unit is a commander, the commander's ID (AI only). Otherwise set to 0x00. (likely should not change)
+03: The unit's state (See UnitStateEnum) (likely should not change)
+04: pre-placement X coordinate (likely should not change)
+05: pre-placement Y coordinate (likely should not change)
+06: post-placement X coordinate (likely should not change)
+07: post-placement Y coordinate (likely should not change)
+08: Held item 1
+09: Held item 2
+0A: Held item 3
+0B: Held item 4
+0C: Primary AI behavior ID (set to 0x00 for player characters)
+0D: Secondary AI behavior ID (set to 0x00 for player characters)
+0E: Target AI behavior ID (set to 0x00 for player characters)
+0F: Retreat AI behavior ID (set to 0x00 for player characters)
+
