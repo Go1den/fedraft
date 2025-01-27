@@ -1,7 +1,8 @@
 from characters.party.Bartre import Bartre
 from characters.party.Eliwood import Eliwood
 from helper import flatten, maxAddress
-from scripts import SkipTutorial, EditTitleScreen, MapPrologue
+from scripts import SkipTutorial, EditTitleScreen
+from scripts.chapters import ChapterPrologue
 
 def main(input_file, output_file):
     # Drafted players list
@@ -11,7 +12,7 @@ def main(input_file, output_file):
     updateList = flatten([
         SkipTutorial.get(),
         EditTitleScreen.get(),
-        MapPrologue.get(draftPicks)
+        ChapterPrologue.get(draftPicks)
     ])
 
     with open(input_file, 'rb') as file:
