@@ -1,0 +1,64 @@
+Character address information:
+Characters are stored beginning at 0xBDCE4C.
+Each character uses thirty-four bytes of data.
+For example, Eliwood is stored from 0xBDCE4C to 0xBDCEB3 (inclusive)
+
+Of the 34 slots of a character, here's what is stored without byte notation lol:
+01: ID of the name of the character (second byte)
+02: ID of the name of the character (first byte)
+03: ID of the character details (second byte)
+04: ID of the character details (first byte)
+05: ID of the character (their position in the list?)
+06: Support class ID
+07: Portrait ID
+08: ??? (might be NPC specific, leave at 00)
+
+09: ??? (might be NPC specific, leave at 00)
+10: Affinity
+11: Unit Sort Order
+12: Base Level
+13: Base HP
+14: Base Power (FF = -1, FE = -2, FD = -3, etc.)
+15: Base Skill (FF = -1, FE = -2, FD = -3, etc.)
+16: Base Speed (FF = -1, FE = -2, FD = -3, etc.)
+
+17: Base Defense (FF = -1, FE = -2, FD = -3, etc.)
+18: Base Resistance (FF = -1, FE = -2, FD = -3, etc.)
+19: Base Luck (FF = -1, FE = -2, FD = -3, etc.)
+20: Base Constitution (FF = -1, FE = -2, FD = -3, etc.)
+21: Weapon Level - Sword
+22: Weapon Level - Lance
+23: Weapon Level - Axe
+24: Weapon Level - Bow
+
+25: Weapon Level - Staff
+26: Weapon Level - Anima
+27: Weapon Level - Light
+28: Weapon Level - Dark
+29: Growth Rate - HP
+30: Growth Rate - Power
+31: Growth Rate - Skill
+32: Growth Rate - Speed
+
+33: Growth Rate - Defense
+34: Growth Rate - Resistance
+35: Growth Rate - Luck
+36: Base Battle Palette
+37: Promo Battle Palette
+38: Unique Base Anime
+39: Unique Promo Anime
+40: Unknown ID #1 (always 00)
+
+41: Ability 1 (always 00)
+42: Ability 2 (might be the only one that's ever used?)
+43: Ability 3 (also used sometimes if the character has 2 abilities)
+44: Ability 4 (always 00)
+45: ID of the support data of the character (fourth byte)
+46: ID of the support data of the character (third byte)
+47: ID of the support data of the character (second byte)
+48: ID of the support data of the character (first byte)
+
+49: Conversation Group ID
+50: Unknown ID #2 (Seems to be always 00)
+51: Unknown ID #3 (Seems to be always 00)
+52: Unknown ID #4 (Seems to be always 00)
