@@ -11,7 +11,7 @@ from characters.WeaponLevels import WeaponLevels
 
 class Character:
 
-    def __init__(self, name: str, startingAddress: str, statCalculator: StatCalculator, heldItems: HeldItems, data: List[int]):
+    def __init__(self, name: str, startingAddress: str, statCalculator: StatCalculator, heldItems: HeldItems, data: List[int], baseGameRecruit: bool):
         self.name = name
         self.startingAddress = startingAddress  # Where the character is stored
         self.data = data  # Do not use this for anything because the data may be modified later in our scripting
@@ -24,6 +24,7 @@ class Character:
         self.characterIDs = CharacterIDs(data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[9],
                                          data[10], data[35], data[36], data[37], data[38], data[44], data[45],
                                          data[46], data[47], data[48])
+        self.baseGameRecruit = baseGameRecruit
 
     def getCharacterByteList(self) -> List[int]:
         return [
